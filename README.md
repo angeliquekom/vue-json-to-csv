@@ -1,10 +1,14 @@
 # vue-json-to-csv
 
-A Vue.js 2 component to transform and download a json in csv format
+A Vue.js 2 component to transform and download a json in csv format [https://angeliquekom.github.io/vue-json-to-csv.github.io/](https://angeliquekom.github.io/vue-json-to-csv.github.io/)
 
 ## Installation
 
 `npm install --save vue-json-to-csv` or use `dist/vue-json-to-csv.min.js`
+
+## Demo
+
+[Demo](https://angeliquekom.github.io/vue-json-to-csv.github.io/)
 
 ## Usage
 
