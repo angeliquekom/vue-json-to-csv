@@ -22,7 +22,7 @@ module.exports = {
 
         c += row + '\r\n'
       } catch (err) {
-        c = false
+        c = 'error'
       } finally {
         return c
       }
@@ -50,7 +50,7 @@ module.exports = {
           c += row + '\r\n'
         })
       } catch (err) {
-        c = false
+        c = 'error'
       } finally {
         return c
       }
