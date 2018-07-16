@@ -25,7 +25,7 @@ For standalone usage:
 </script>
 ```
 
-## Sample 1
+## Sample 1 (simple use)
 
 Simple usage: will generate a default button. The csv will include all the labels (name, surname) and the data
 
@@ -45,7 +45,7 @@ csv.csv
 | Joe | Roe |
 | John | Doe |
 
-## Sample 2
+## Sample 2 (filter labels)
 
 Selected labels with custom csv title: will generate a custom button as defined at the slot. The csv will include only the "name" label with the "First name" title and the relevant data.
 
@@ -69,9 +69,9 @@ My_CSV.csv
 | Joe |
 | John |
 
-## Sample 3
+## Sample 3 (handle success/error, custom button)
 
-Handle success/error, custom button: use of custom methods on success or error.
+Handle success/error with custom button: use of custom methods on success or error.
 
 ```html
 <vue-json-to-csv :json-data="[
