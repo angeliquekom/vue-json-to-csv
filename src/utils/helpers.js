@@ -11,7 +11,7 @@ module.exports = {
     },
     $_createCsvLabels (labels) {
       let row = ''
-      var c = ''
+      let c = ''
 
       try {
         Object.keys(labels).map(function (m, i) {
@@ -29,7 +29,7 @@ module.exports = {
     },
     $_createCsvContent (arr, labels) {
       let row = ''
-      var c = ''
+      let c = ''
       let type = ''
 
       try {
