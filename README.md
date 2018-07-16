@@ -71,7 +71,7 @@ My_CSV.csv
 
 ## Sample 3
 
-Handle success/error: use of custom methods on success or error.
+Handle success/error, custom button: use of custom methods on success or error.
 
 ```html
 <vue-json-to-csv :json-data="[
@@ -80,6 +80,9 @@ Handle success/error: use of custom methods on success or error.
   ]"
   @success="val => handleSuccess(val)"
   @error="val => handleError(val)">
+  <button class="button__custom">
+    <b>My custom button</b>
+  </button>
 </vue-json-to-csv>
 ```
 ## Configuration
