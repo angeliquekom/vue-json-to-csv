@@ -38,6 +38,8 @@ Simple usage: will generate a default button. The csv will include all the label
 ```
 #### Result csv
 
+csv.csv
+
 | name   |  surname |
 |----------|------|
 | Joe | Roe |
@@ -52,13 +54,15 @@ Selected labels with custom csv title: will generate a custom button as defined 
     { name: 'Joe', surname: 'Roe' },
     { name: 'John', surname: 'Doe' }
   ]"
-  :labels="{ name:{ title: 'First name' } }"
+  :labels="{ name: { title: 'First name' } }"
   :csv-title="My_CSV"
   >
 </vue-json-to-csv>
 ```
 
 #### Result csv
+
+My_CSV.csv
 
 | First name |
 |----------|
@@ -82,9 +86,9 @@ Handle success/error: use of custom methods on success or error.
 
 | Prop   |  Details |
 |----------|------|
-| json-data | Array of the objects which contain the data to display (required). Each key will be a different column at the csv. All the objects should contain the same keys. If empty array an error will be returned. |
+| json-data | Array of the objects which contain the data to display (required). Each key will be a different column at the csv. All the objects should contain the same keys. If empty array an error will be returned. Example: <code>[ { name: 'Joe', surname: 'Roe' }, { name: 'Joe', surname: 'Doe' }]</code>|
 | show-labels | Boolean. If false the first row of the csv will not contain the labels names. |
-| labels | An object of the keys of the labels will be displayed. Used only when we don't want to display all the keys. For each key we provide the title of the key to displayed. In case of show-labels=false the title is mandatory. If not defined all the keys will be parsed. |
-| :csv-title | String. The title of the generated csv. Default: 'csv' |
-| @update:error | Will be triggered in case of an empty json array or if the labels object has not children |
-| @update:success| Will be triggered in case of successful csv creation |
+| labels | An object of the keys of the labels will be displayed. Use to filter the keys to display and modify their label title. For each key we provide the title of the key to displayed. If not defined all the keys will be parsed. Example: <code>{ name: { title: 'First name' } }</code>|
+| csv-title | String. The title of the generated csv. Default: 'csv' |
+| @update:error | Will be triggered in case of an empty json array, if the labels object has not children or any parsing issue |
+| @update:success| Will be triggered in case of a successful csv creation |
