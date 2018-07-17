@@ -9,7 +9,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>
+        <v-btn flat href="https://github.com/angeliquekom/vue-json-to-csv#readme">
           <i class="fab fa-github white--text" style="font-size:25px;"></i>
         </v-btn>
       </v-toolbar-items>
