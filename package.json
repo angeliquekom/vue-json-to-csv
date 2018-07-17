@@ -1,6 +1,6 @@
 {
   "name": "vue-json-to-csv",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue.js 2 component to transform and download a json in csv format",
   "main": "dist/vue-json-to-csv.js",
   "scripts": {
@@ -42,9 +42,6 @@
     "vue-template-compiler": "^2.2.1",
     "webpack": "1.13.1",
     "webpack-merge": "^4.1.0"
-  },
-  "dependencies": {
-    "vue-cli": "^2.9.6"
   },
   "jest": {
     "collectCoverage": true,
