@@ -35,8 +35,7 @@ export default {
   },
   data: () => ({
     csvLabels: null,
-    csvData: null,
-    message: 'hi'
+    csvData: null
   }),
   destroyed () {
     this.csvLabels = null

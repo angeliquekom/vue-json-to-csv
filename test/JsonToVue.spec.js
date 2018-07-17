@@ -3,8 +3,6 @@ import { shallowMount, mount, createLocalVue } from '@vue/test-utils'
 import JsonToCsv from '@/src/JsonToCsv.vue'
 import helpers from '@/src/utils/helpers'
 
-var mocked_createCsvLabelsConf, mocked_createCsvLabels, mocked_createCsvContent, mocked_downloadCsv
-
 describe('JsonToCsv.vue', () => {
   it('renders the default button', () => {
 
@@ -123,8 +121,6 @@ describe('JsonToCsv.vue', () => {
     })
 
     const mocked_downloadCsv  = jest.spyOn(wrapper.vm, '$_downloadCsv');
-    // wrapper.vm.$emit('error', 'sdsdsdsd')
-    // console.log(wrapper.emitted('error'))
     wrapper.find('button').trigger('click')
     expect(mocked_downloadCsv).toHaveBeenCalled()
   })
