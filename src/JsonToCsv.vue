@@ -56,7 +56,9 @@ export default {
         return
       }
 
-      let labelsConf = this.labels || this.$_createCsvLabelsConf(Object.getOwnPropertyNames(this.jsonData[0]))
+      let labels = Object.getOwnPropertyNames({ ...this.jsonData[0] })
+
+      let labelsConf = this.labels || this.$_createCsvLabelsConf(labels)
 
       this.csvLabels = this.showLabels ? this.$_createCsvLabels(labelsConf) : ''
       this.csvData = this.$_createCsvContent(this.jsonData, labelsConf)

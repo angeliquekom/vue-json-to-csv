@@ -94,10 +94,7 @@
         <div v-html="example3" class="example__code mb-2"></div>
         <span class="subheading">Result</span>
         <div>
-          <vue-json-to-csv :json-data="[
-              { name: 'Joe', surname: 'Roe' },
-              { name: 'John', surname: 'Doe' }
-            ]" :csv-title="'My csv title'">
+          <vue-json-to-csv :json-data="samples.sample1" :csv-title="'My csv title'">
             <button class="teal button__custom">
               <b>Download with custom title</b>
             </button>
@@ -151,7 +148,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from 'vue-json-to-csv'
+import VueJsonToCsv from './../../dist/vue-json-to-csv'
 
 export default {
   name: 'App',
@@ -160,6 +157,12 @@ export default {
   },
   data () {
     return {
+      samples: {
+        sample1: [
+          { name: 'Joe', surname: 'Roe' },
+          { name: 'John', surname: 'Doe' }
+        ]
+      },
       standalone: `&lt;script src="vue.min.js">&lt;/script>
   &lt;script src="dist/vue-json-to-csv.min.js">&lt;/script>
   &lt;script type="text/javascript">
@@ -202,8 +205,9 @@ export default {
       &lt;/vue-json-to-csv></span>`,
       example5: `<span>&lt;vue-json-to-csv <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:json-data="[
-          { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' }
+          { name: 'John', surname: 'Doe', age: 20, salary: 20.000, hours: 37.4 },
+          { name: 'John', surname: 'Roe', age: 40, salary: 40.000, hours: 35.2 },
+          { name: 'Jane', surname: 'Woe', age: 50, salary: 52.000, hours: 30.4 }
         ]"<br>
         &nbsp;&nbsp;&nbsp;&nbsp;:labels="{
           name: { title: 'First name' },

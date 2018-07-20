@@ -61,6 +61,9 @@ Selected labels with custom csv title: will generate a custom button as defined 
   :labels="{ name: { title: 'First name' } }"
   :csv-title="My_CSV"
   >
+  <button>
+    <b>My custom button</b>
+  </button>
 </vue-json-to-csv>
 ```
 
@@ -73,18 +76,24 @@ My_CSV.csv
 | Joe |
 | John |
 
-## Sample 3 (handle success/error, custom button)
+## Sample 3 (handle success/error, custom button, configure labels)
 
-Handle success/error with custom button: use of custom methods on success or error.
+Handle success/error with custom button, returns specific labels with custom title: use of custom methods on success or error.
 
 ```html
 <vue-json-to-csv :json-data="[
-    { name: 'Joe', surname: 'Roe' },
-    { name: 'Joe', surname: 'Doe' }
+    { name: 'John', surname: 'Doe', age: 20, salary: 20.000, hours: 37.4 },
+    { name: 'John', surname: 'Roe', age: 40, salary: 40.000, hours: 35.2 },
+    { name: 'Jane', surname: 'Woe', age: 50, salary: 52.000, hours: 30.4 }
   ]"
+  :labels="{
+    name: { title: 'First name' },
+    salary: { title: 'Annual salary' },
+    hours: { title: 'Hours/week' }
+  }"
   @success="val => handleSuccess(val)"
   @error="val => handleError(val)">
-  <button class="button__custom">
+  <button>
     <b>My custom button</b>
   </button>
 </vue-json-to-csv>
