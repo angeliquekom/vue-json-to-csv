@@ -8,6 +8,7 @@
         vue-json-to-csv
       </v-toolbar-title>
       <v-spacer></v-spacer>
+
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat href="https://github.com/angeliquekom/vue-json-to-csv#readme">
           <i class="fab fa-github white--text" style="font-size:25px;"></i>
@@ -22,7 +23,7 @@
           </span>
         </div>
         <div style="font-size:22px" class="font-weight--300">
-          A Vue.js 2 component for transform and download a json in csv format
+          A Vue.js 2 component for transform and download a json in csv format (v1.5)
         </div>
       </v-flex>
       <v-flex xs12 class="pb-2">
@@ -148,7 +149,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from './../../dist/vue-json-to-csv'
+import VueJsonToCsv from 'vue-json-to-csv'
 
 export default {
   name: 'App',
