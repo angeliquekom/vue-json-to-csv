@@ -23,7 +23,7 @@
           </span>
         </div>
         <div style="font-size:22px" class="font-weight--300">
-          A Vue.js 2 component for transform and download a json in csv format (v1.5)
+          A Vue.js 2 component for transform and download a json in csv format (v1.0.5)
         </div>
       </v-flex>
       <v-flex xs12 class="pb-2">
@@ -149,7 +149,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from 'vue-json-to-csv'
+import VueJsonToCsv from '../../dist/vue-json-to-csv'
 
 export default {
   name: 'App',
