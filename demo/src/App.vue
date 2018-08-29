@@ -130,11 +130,7 @@
               { name: 'John', surname: 'Roe', age: 40, salary: 40.000, hours: 35.2 },
               { name: 'Jane', surname: 'Woe', age: 50, salary: 52.000, hours: 30.4 }
             ]"
-            :labels="{
-              name: { title: 'First name' },
-              salary: { title: 'Annual salary' },
-              hours: { title: 'Hours/week' }
-            }"
+            :labels="labels4"
             :csv-title="'My_Custom_CSV'"
             @success="val => handleSuccess(val)"
             @error="val => handleError(val)">
@@ -149,7 +145,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from 'vue-json-to-csv'
+import VueJsonToCsv from './../../dist/vue-json-to-csv'
 
 export default {
   name: 'App',
@@ -161,8 +157,13 @@ export default {
       samples: {
         sample1: [
           { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' }
+          { name: 'John', surname: 'Doé' }
         ]
+      },
+      labels4: {
+        name: { title: 'First name' },
+        salary: { title: 'Annual salary' },
+        hours: { title: 'Hours/week' }
       },
       standalone: `&lt;script src="vue.min.js">&lt;/script>
   &lt;script src="dist/vue-json-to-csv.min.js">&lt;/script>
@@ -189,7 +190,7 @@ export default {
       example3: `<span>&lt;vue-json-to-csv <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:json-data="[
           { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' } <br/>
+          { name: 'John', surname: 'Doé' } <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:csv-title="'My csv title'" <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="teal button__custom"> <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;b>Download with custom title&lt;/b> <br/>
