@@ -9,13 +9,13 @@ module.exports = {
 
       return conf
     },
-    $_createCsvLabels (labels) {
+    $_createCsvLabels (labels, separator) {
       let row = ''
       let c = ''
 
       try {
         Object.keys(labels).map(function (m, i) {
-          row += '"' + labels[m].title + '",'
+          row += '"' + labels[m].title + '"' + separator
         })
 
         row = row.slice(0, -1)
@@ -27,7 +27,7 @@ module.exports = {
         return c
       }
     },
-    $_createCsvContent (arr, labels) {
+    $_createCsvContent (arr, labels, separator) {
       let row = ''
       let c = ''
       let type = ''
@@ -39,9 +39,9 @@ module.exports = {
           Object.keys(labels).map(function (k, s) {
             type = typeof m[k]
             if (type === 'number' || type === 'float') {
-              row += m[k] + ','
+              row += m[k] + separator
             } else {
-              row += '"' + m[k] + '",'
+              row += '"' + m[k] + '"' + separator
             }
           })
 
@@ -57,7 +57,7 @@ module.exports = {
     },
     $_downloadCsv (uid, csv, title) {
       try {
-        let uri = 'data:text/csv;charset=utf-8,' + encodeURI(csv)
+        let uri = 'data:text/csv;charset=utf-8,' + '\uFEFF' + encodeURI(csv)
 
         let link = document.createElement('a')
 

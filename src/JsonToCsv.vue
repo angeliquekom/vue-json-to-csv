@@ -31,6 +31,11 @@ export default {
     labels: {
       type: Object,
       required: false
+    },
+    separator: {
+      type: String,
+      default: ',',
+      required: false
     }
   },
   data: () => ({
@@ -60,8 +65,8 @@ export default {
 
       let labelsConf = this.labels || this.$_createCsvLabelsConf(labels)
 
-      this.csvLabels = this.showLabels ? this.$_createCsvLabels(labelsConf) : ''
-      this.csvData = this.$_createCsvContent(this.jsonData, labelsConf)
+      this.csvLabels = this.showLabels ? this.$_createCsvLabels(labelsConf, this.separator) : ''
+      this.csvData = this.$_createCsvContent(this.jsonData, labelsConf, this.separator)
 
       if (this.csvLabels === 'error' || this.csvData === 'error') {
         this.handleError(`Error: An error occured while parsing the data.`, hasErrorEvent)
