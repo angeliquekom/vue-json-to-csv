@@ -23,7 +23,7 @@
           </span>
         </div>
         <div style="font-size:22px" class="font-weight--300">
-          A Vue.js 2 component for transform and download a json in csv format (v1.0.6)
+          A Vue.js 2 component for transform and download a json in csv format (v1.1.7)
         </div>
       </v-flex>
       <v-flex xs12 class="pb-2">
@@ -58,7 +58,7 @@
         <div>
           <vue-json-to-csv :json-data="[
               { name: 'Joe', surname: 'Roe' },
-              { name: 'John', surname: 'Doe' }
+              { name: 'John', surname: 'Doé' }
             ]">
           </vue-json-to-csv>
         </div>
@@ -95,9 +95,9 @@
         <div v-html="example3" class="example__code mb-2"></div>
         <span class="subheading">Result</span>
         <div>
-          <vue-json-to-csv :json-data="samples.sample1" :csv-title="'My csv title'">
+          <vue-json-to-csv :json-data="samples.sample1" :csv-title="'My csv title'" :separator="';'">
             <button class="teal button__custom">
-              <b>Download with custom title</b>
+              <b>Download with custom title and separator</b>
             </button>
           </vue-json-to-csv>
         </div>
@@ -149,7 +149,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from 'vue-json-to-csv'
+import VueJsonToCsv from './../../dist/vue-json-to-csv'
 
 export default {
   name: 'App',
@@ -161,7 +161,7 @@ export default {
       samples: {
         sample1: [
           { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' }
+          { name: 'John', surname: 'Doé' }
         ]
       },
       standalone: `&lt;script src="vue.min.js">&lt;/script>
@@ -172,7 +172,7 @@ export default {
       example1: `<span>&lt;vue-json-to-csv <br>
         &nbsp;&nbsp;&nbsp;&nbsp;:json-data="[
           { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' }
+          { name: 'John', surname: 'Doé' }
         ]"<br>
       &lt;/vue-json-to-csv></span>`,
       example2: `<span>&lt;vue-json-to-csv <br/>
@@ -189,8 +189,9 @@ export default {
       example3: `<span>&lt;vue-json-to-csv <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:json-data="[
           { name: 'Joe', surname: 'Roe' },
-          { name: 'John', surname: 'Doe' } <br/>
+          { name: 'John', surname: 'Doé' } <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:csv-title="'My csv title'" <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;:separator="';'" <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="teal button__custom"> <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;b>Download with custom title&lt;/b> <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button> <br/>

@@ -118,4 +118,33 @@ describe('Helpers.js', () => {
 
     expect(helpers.methods.$_createCsvContent(jsonData, labels, separator)).toEqual(expected)
   })
+
+  it('renders the right separator', () => {
+
+    const jsonData = [
+      { name: 'John', surname: 'Doe', age: 20, hours: 10.1 },
+      { name: 'John', surname: 'Roe', age: 30, hours: 20.1 },
+      { name: 'Jane', surname: 'Woe', age: 40, hours: 30.1 }
+    ]
+
+    const labels = {
+      name: {
+        title: 'First name'
+      },
+      surname: {
+        title: 'Last name'
+      },
+      hours: {
+        title: 'Total hours'
+      }
+    }
+
+    const separator = ';'
+
+    let expected = '"John"' + ';' + '"Doe"' + ';' + 10.1 + '\r\n' +
+      '"John"' + ';' + '"Roe"' + ';' + 20.1 + '\r\n' +
+      '"Jane"' + ';' + '"Woe"' + ';' + 30.1 + '\r\n'
+
+    expect(helpers.methods.$_createCsvContent(jsonData, labels, separator)).toEqual(expected)
+  })
 })
