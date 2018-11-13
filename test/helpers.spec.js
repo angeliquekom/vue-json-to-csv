@@ -28,9 +28,11 @@ describe('Helpers.js', () => {
       }
     }
 
+    const separator = ','
+
     let expected = '"name","surname"' + '\r\n'
 
-    expect(helpers.methods.$_createCsvLabels(labels)).toEqual(expected)
+    expect(helpers.methods.$_createCsvLabels(labels, separator)).toEqual(expected)
   })
 
   it('renders the total custom labels', () => {
@@ -44,9 +46,11 @@ describe('Helpers.js', () => {
       }
     }
 
+    const separator = ','
+
     let expected = '"My first name","My last name"' + '\r\n'
 
-    expect(helpers.methods.$_createCsvLabels(labels)).toEqual(expected)
+    expect(helpers.methods.$_createCsvLabels(labels, separator)).toEqual(expected)
   })
 
   it('renders the total rows of the content with custom labels', () => {
@@ -66,9 +70,11 @@ describe('Helpers.js', () => {
       }
     }
 
+    const separator = ','
+
     let expected = '"John","Doe"' + '\r\n' + '"John","Roe"' + '\r\n' + '"Jane","Woe"' + '\r\n'
 
-    expect(helpers.methods.$_createCsvContent(jsonData, labels)).toEqual(expected)
+    expect(helpers.methods.$_createCsvContent(jsonData, labels, separator)).toEqual(expected)
   })
 
   it('renders the link', (done) => {
@@ -104,10 +110,12 @@ describe('Helpers.js', () => {
       }
     }
 
+    const separator = ','
+
     let expected = '"John"' + ',' + 20 + ',' + 10.1 + '\r\n' +
       '"John"' + ',' + 30 + ',' + 20.1 + '\r\n' +
       '"Jane"' + ',' + 40 + ',' + 30.1 + '\r\n'
 
-    expect(helpers.methods.$_createCsvContent(jsonData, labels)).toEqual(expected)
+    expect(helpers.methods.$_createCsvContent(jsonData, labels, separator)).toEqual(expected)
   })
 })
