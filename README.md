@@ -106,5 +106,6 @@ Handle success/error with custom button, returns specific labels with custom tit
 | show-labels | Boolean. If false the first row of the csv will not contain the labels names. |
 | labels | An object of the keys of the labels will be displayed. Use to filter the keys to display and modify their label title. For each key we provide the title of the key to displayed. If not defined all the keys will be parsed. Example: <code>{ name: { title: 'First name' } }</code>|
 | csv-title | String. The title of the generated csv. Default: 'csv' |
+| separator | String. The separator of the columns. Default: ',' |
 | @update:error | Will be triggered in case of an empty json array, if the labels object has not children or any parsing issue |
 | @update:success| Will be triggered in case of a successful csv creation |

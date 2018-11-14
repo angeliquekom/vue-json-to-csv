@@ -23,7 +23,7 @@
           </span>
         </div>
         <div style="font-size:22px" class="font-weight--300">
-          A Vue.js 2 component for transform and download a json in csv format (v1.0.6)
+          A Vue.js 2 component for transform and download a json in csv format (v1.1.7)
         </div>
       </v-flex>
       <v-flex xs12 class="pb-2">
@@ -132,6 +132,7 @@
             ]"
             :labels="labels4"
             :csv-title="'My_Custom_CSV'"
+            :separator="';'"
             @success="val => handleSuccess(val)"
             @error="val => handleError(val)">
             <button class="teal button__custom">
@@ -217,6 +218,7 @@ export default {
           hours: { title: 'Hours/week' }
         }" <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:csv-title="'My_Custom_CSV'" <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;:separator="';'" <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;@success="val => handleSuccess(val)" <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;@error="val => handleError(val)"> <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="teal button__custom"> <br/>
