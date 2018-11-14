@@ -74,7 +74,7 @@
         <span class="subheading">Result</span>
         <div>
           <vue-json-to-csv :json-data="[
-              { name: 'Joe', surname: 'Roe' },
+              { name: 'Joé', surname: 'Roe' },
               { name: 'John', surname: 'Doe' }
             ]" :labels=" {
               name: { title: 'First name' }
@@ -179,7 +179,7 @@ export default {
       &lt;/vue-json-to-csv></span>`,
       example2: `<span>&lt;vue-json-to-csv <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:json-data="[
-          { name: 'Joe', surname: 'Roe' },
+          { name: 'Joé', surname: 'Roe' },
           { name: 'John', surname: 'Doe' } <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;:labels="{
             name:{ title: 'First name' }
