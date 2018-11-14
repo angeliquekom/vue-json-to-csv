@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import VueJsonToCsv from './../../dist/vue-json-to-csv'
+import VueJsonToCsv from 'vue-json-to-csv'
 
 export default {
   name: 'App',
