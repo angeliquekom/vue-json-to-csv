@@ -90,11 +90,11 @@ describe('Helpers.js', () => {
     })
   })
 
-  it('renders the right format at numbers and floats', () => {
+  it('renders the right format at numbers and floats and special characters', () => {
 
     const jsonData = [
       { name: 'John', surname: 'Doe', age: 20, hours: 10.1 },
-      { name: 'John', surname: 'Roe', age: 30, hours: 20.1 },
+      { name: 'John#', surname: 'Roe', age: 30, hours: 20.1 },
       { name: 'Jane', surname: 'Woe', age: 40, hours: 30.1 }
     ]
 
@@ -113,7 +113,7 @@ describe('Helpers.js', () => {
     const separator = ','
 
     let expected = '"John"' + ',' + 20 + ',' + 10.1 + '\r\n' +
-      '"John"' + ',' + 30 + ',' + 20.1 + '\r\n' +
+      '"John#"' + ',' + 30 + ',' + 20.1 + '\r\n' +
       '"Jane"' + ',' + 40 + ',' + 30.1 + '\r\n'
 
     expect(helpers.methods.$_createCsvContent(jsonData, labels, separator)).toEqual(expected)

@@ -50,7 +50,6 @@ export default {
     handleClick () {
       let hasErrorEvent = (Object.keys(this._events).indexOf('error') > -1)
       let hasSuccessEvent = (Object.keys(this._events).indexOf('success') > -1)
-
       if (!this.jsonData.length) {
         this.handleError(`Error: Data are empty`, hasErrorEvent)
         return
