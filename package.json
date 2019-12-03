@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angeliquekom/vue-json-to-csv"
+    "url": "git+https://github.com/iColabora/vue-json-to-csv"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.16",
@@ -40,8 +40,8 @@
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.3",
     "vue-template-compiler": "^2.2.1",
-    "webpack": "1.13.1",
-    "webpack-merge": "^4.1.0"
+    "webpack": "^1.13.1",
+    "webpack-merge": "^4.2.2"
   },
   "jest": {
     "collectCoverage": true,
