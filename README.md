@@ -109,3 +109,19 @@ Handle success/error with custom button, returns specific labels with custom tit
 | separator | String. The separator of the columns. Default: ',' |
 | @update:error | Will be triggered in case of an empty json array, if the labels object has not children or any parsing issue |
 | @update:success| Will be triggered in case of a successful csv creation |
+
+## Preparing to build (run once)
+
+1)  npm install -g rimraf
+2)  npm install -g webpack
+3)  npm install -g webpack-cli
+4)  npm install --save-dev webpack
+5)  npm install --save-dev webpack-merge
+6)  npm install --save-dev eslint-friendly-formatter
+7)  npm install
+
+## Building
+
+npm run build
+
+Be sure that "dist" folder is NOT added at git ignore (If you won't use the npm repository"
