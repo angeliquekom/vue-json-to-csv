@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iColabora/vue-json-to-csv"
+    "url": "git+https://github.com/angeliquekom/vue-json-to-csv"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.16",
