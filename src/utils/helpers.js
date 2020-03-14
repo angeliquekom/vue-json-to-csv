@@ -41,7 +41,11 @@ module.exports = {
             if (type === 'number' || type === 'float') {
               row += m[k] + separator
             } else {
-              row += '"' + m[k] + '"' + separator
+              if (m[k] !== null && m[k] !== 'null') {
+                row += '"' + m[k] + '"' + separator
+              } else {
+                row += '""' + separator
+              }
             }
           })
 
@@ -57,12 +61,14 @@ module.exports = {
     },
     $_downloadCsv (uid, csv, title) {
       try {
-        let uri = 'data:text/csv;charset=utf-8,' + '\uFEFF' + encodeURIComponent(csv)
+        let blob = new Blob(['\uFEFF' + csv], {
+          type: 'text/csv'
+        })
 
         let link = document.createElement('a')
 
         link.id = 'csv-' + uid
-        link.href = uri
+        link.href = URL.createObjectURL(blob)
 
         document.body.appendChild(link)
 

@@ -66,7 +66,6 @@ export default {
 
       this.csvLabels = this.showLabels ? this.$_createCsvLabels(labelsConf, this.separator) : ''
       this.csvData = this.$_createCsvContent(this.jsonData, labelsConf, this.separator)
-
       if (this.csvLabels === 'error' || this.csvData === 'error') {
         this.handleError(`Error: An error occured while parsing the data.`, hasErrorEvent)
         return
